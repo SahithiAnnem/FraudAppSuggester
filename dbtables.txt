@@ -1,0 +1,16 @@
+create database fraudapp;
+use fraudapp;
+create table admin(username varchar(40),pwd varchar(40));
+insert into admin values('admin','admin');
+
+create table userdetails(username varchar(40) primary key,pwd varchar(40),emailid varchar(40),pno varchar(20),address text);
+
+
+create table uploaderdetails(username varchar(40),pwd varchar(30),mno varchar(30),address text,cname text,lno text,emailid text,status int);
+
+create table fileupload(appid text,fpath text);
+
+create table appdetails(appid varchar(40) primary key, uploadername varchar(40), appname varchar(50),appVersion varchar(40),category varchar(40),filesize int, uploadon varchar(40),descr text);
+
+create table appratings(appid varchar(40), rating int,review int,comments text, noofdownloads int,username varchar(40));
+
